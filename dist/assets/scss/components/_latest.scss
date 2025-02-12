@@ -1,0 +1,86 @@
+@use "/public/assets/scss/utils/colors" as c;
+
+.latest {
+  &__container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 30rem);
+    grid-template-rows: repeat(2, 20rem);
+    grid-gap: 5rem 3rem;
+    min-height: 45rem;
+  }
+
+  &__loading-box {
+    width: 30rem;
+    height: 20rem;
+    border-radius: 0.5rem;
+    box-shadow: c.$box-shadow;
+    padding-bottom: 2rem;
+    background-color: c.$color-grey-1;
+  }
+
+  &__box {
+    border-radius: 0.5rem;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: translateY(-1.5rem);
+    }
+  }
+
+  &__sale {
+    position: absolute;
+    width: 6.5rem;
+    top: 0;
+    left: -1rem;
+  }
+
+  &__img {
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    color: c.$color-black;
+  }
+
+  &__name {
+    font-size: 1.3rem;
+    color: c.$color-black;
+  }
+
+  &__info-right {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__price {
+    color: c.$color-primary;
+  }
+
+  &__options {
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+  }
+
+  &__option {
+    font-size: 1.4rem;
+    border: none;
+    background-color: transparent;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover,
+    &--active {
+      color: c.$color-primary;
+    }
+  }
+}

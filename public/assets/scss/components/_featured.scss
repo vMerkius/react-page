@@ -1,0 +1,50 @@
+@use "/public/assets/scss/utils/colors" as c;
+
+.featured {
+  text-align: center;
+
+  &__loading-box {
+    width: 20rem;
+    height: 25rem;
+    border-radius: 0.5rem;
+    box-shadow: c.$box-shadow;
+    padding-bottom: 2rem;
+    background-color: c.$color-grey-1;
+  }
+
+  &__related {
+    margin-top: 5rem;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    min-height: 25rem;
+  }
+
+  &__paging {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  &__rectangle {
+    height: 0.3rem;
+    width: 1.2rem;
+    background-color: rgba(c.$color-primary-light, 0.5);
+    cursor: pointer;
+    border-radius: 0.2rem;
+    transition: all 0.3s;
+
+    &:hover {
+      width: 1.7rem;
+      background-color: c.$color-primary;
+    }
+
+    &--active {
+      width: 1.7rem;
+      background-color: c.$color-primary;
+    }
+  }
+}

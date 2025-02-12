@@ -1,0 +1,38 @@
+@use "/public/assets/scss/utils/colors" as c;
+
+.trending-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 20rem;
+  border-radius: 0.5rem;
+  box-shadow: c.$box-shadow;
+  padding: 1rem;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-2rem);
+    box-shadow: c.$box-hover-shadow;
+  }
+
+  &__img {
+    width: 100%;
+    min-height: 15rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+  }
+
+  &__name {
+    color: c.$color-primary;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+  }
+
+  &__prices {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    font-size: 1.2rem;
+  }
+}

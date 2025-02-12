@@ -1,0 +1,75 @@
+@use "/public/assets/scss/utils/colors" as c;
+@use "/public/assets/scss/utils/mixins" as m;
+
+.top {
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  &__item {
+    transform: translateY(0);
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-1rem);
+
+      .top__img {
+        transform: translate(1rem, -0.5rem);
+      }
+    }
+  }
+
+  &__img-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: c.$default-box-shadow;
+  }
+
+  &__img {
+    @include m.circle(20rem);
+    background-size: cover;
+    transition: all 0.3s;
+  }
+
+  &__img-bg {
+    @include m.circle(20rem);
+    position: absolute;
+    background-color: c.$color-grey-3;
+    z-index: -1;
+  }
+
+  &__name {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: c.$color-black;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  &__paging {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  &__dot {
+    @include m.circle(1rem);
+    background-color: c.$color-white;
+    border: 1.5px solid c.$color-primary;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &--active,
+    &:hover {
+      scale: 0.8;
+      background-color: c.$color-primary;
+      border: none;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@use "/public/assets/scss/utils/colors" as c;
+
+.custom-list-item {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  & li {
+    color: c.$color-grey-3;
+  }
+}

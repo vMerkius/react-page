@@ -1,0 +1,84 @@
+@use "/public/assets/scss/utils/colors" as c;
+@use "/public/assets/scss/utils/mixins" as m;
+
+.hero {
+  height: 90vh;
+  background-color: c.$color-bg;
+  position: relative;
+  display: flex;
+
+  &__lamp-img {
+    height: 30rem;
+    height: 40vh;
+  }
+
+  &__headphones {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__circle {
+    @include m.circle(65vh);
+
+    &--light {
+      background-color: c.$color-grey-2;
+      position: absolute;
+      top: 50%;
+      right: 45%;
+      transform: translate(50%, -50%);
+      z-index: -1;
+    }
+
+    &--dark {
+      background-color: c.$color-grey-3;
+      position: absolute;
+      top: 55%;
+      right: 53%;
+      transform: translate(50%, -50%);
+      z-index: -2;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    gap: 1rem;
+    margin-left: 5rem;
+    width: 30%;
+  }
+
+  &__headphones-img {
+    height: 30rem;
+    height: 70vh;
+  }
+
+  &__dot {
+    position: absolute;
+    bottom: 25%;
+    left: -60%;
+  }
+
+  &__discount-img {
+    width: 12vh;
+    position: absolute;
+    top: 30%;
+    right: 0%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__paging {
+    display: flex;
+    gap: 1rem;
+    position: absolute;
+    bottom: 5%;
+    right: 50%;
+    transform: translate(50%, 0);
+  }
+}

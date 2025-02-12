@@ -1,0 +1,77 @@
+@use "/public/assets/scss/utils/colors" as c;
+
+.footer {
+  display: flex;
+  flex-direction: column;
+
+  &__upper {
+    background-color: c.$color-grey-1;
+    padding: 7rem 15rem 15rem 15rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__address {
+    width: 80%;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__header {
+    font-size: 2rem;
+    font-weight: 600;
+    color: c.$color-black;
+  }
+
+  &__item {
+    color: c.$color-grey-3;
+    font-size: 1.6rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      color: c.$color-primary;
+      text-decoration: underline;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    background-color: c.$color-grey-2;
+    padding: 0 15rem;
+  }
+
+  &__policy {
+    color: c.$color-grey-3;
+  }
+
+  &__icons {
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+  }
+}

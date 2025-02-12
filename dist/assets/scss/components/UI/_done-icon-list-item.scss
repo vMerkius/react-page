@@ -1,0 +1,16 @@
+@use "/public/assets/scss/utils/colors" as c;
+
+.done-icon-list-item {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+  &__icon {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  &__text {
+    color: c.$color-grey-3;
+  }
+}

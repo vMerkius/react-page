@@ -1,0 +1,21 @@
+@use "/public/assets/scss/utils/colors" as c;
+
+.input-with-btn {
+  border-radius: 0.7rem;
+  border: 1px solid c.$color-grey-2;
+  background-color: c.$color-white;
+  padding: 0.2rem 0.2rem 0.2rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 40rem;
+
+  align-items: center;
+  &:hover {
+    border: 1px solid c.$color-primary;
+  }
+
+  &::placeholder {
+    color: c.$color-grey-3;
+  }
+}

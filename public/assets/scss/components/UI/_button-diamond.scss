@@ -1,0 +1,18 @@
+@use "/public/assets/scss/utils/colors" as c;
+
+.diamond {
+  height: 1rem;
+  width: 1rem;
+  border: 1.5px solid c.$color-primary;
+  transform: rotate(45deg);
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: c.$color-primary-dark;
+  }
+
+  &--active {
+    background-color: c.$color-primary;
+  }
+}

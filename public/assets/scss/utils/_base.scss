@@ -1,0 +1,58 @@
+@use "/public/assets/scss/utils/colors" as c;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+li {
+  list-style: none;
+}
+
+.sections-top-gap {
+  margin-top: 5rem;
+
+  &--large {
+    margin-top: 10rem;
+  }
+}
+
+.mini-top-gap {
+  margin-top: 1rem;
+}
+
+.small-top-gap {
+  margin-top: 2rem;
+}
+
+.medium-top-gap {
+  margin-top: 5rem;
+}
+
+.large-top-gap {
+  margin-top: 10rem;
+}
+
+.text-middle {
+  text-align: center;
+}
+
+input {
+  border: none;
+  padding: 0.5rem;
+}

@@ -1,0 +1,22 @@
+@use "/public/assets/scss/utils/colors" as c;
+
+.btn-main {
+  background-color: c.$color-primary;
+  padding: 1.2rem 3rem;
+  color: c.$color-white;
+  border: none;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background-color: c.$color-primary-dark;
+  }
+
+  &--small {
+    padding: 1rem 2rem;
+  }
+}

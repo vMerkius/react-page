@@ -1,0 +1,87 @@
+@use "/public/assets/scss/utils/colors" as c;
+
+.discount {
+  &__container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    margin: 0 10rem;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    gap: 1.5rem;
+  }
+
+  &__header {
+    font-size: 3rem;
+    font-weight: 600;
+    color: c.$color-black;
+  }
+
+  &__subtitle {
+    font-size: 1.8rem;
+    color: c.$color-primary;
+    font-weight: 600;
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    color: c.$color-grey-3;
+    margin-top: 1rem;
+    width: 80%;
+  }
+
+  &__list {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 2rem 1rem;
+  }
+
+  &__right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  &__img {
+    width: 50vh;
+    z-index: 2;
+
+    &--other {
+      border-radius: 0.4rem;
+      border: 1px solid c.$color-grey-3;
+    }
+  }
+
+  &__circle {
+    position: absolute;
+    border-radius: 50%;
+
+    &--light {
+      width: 40vh;
+      height: 40vh;
+      background-color: c.$color-grey-3;
+      top: 0%;
+      right: -10%;
+      z-index: -2;
+    }
+
+    &--dark {
+      width: 50vh;
+      height: 50vh;
+      background-color: c.$color-grey-2;
+      top: 10%;
+      left: -20%;
+      z-index: -1;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@use "/public/assets/scss/utils/colors" as c;
+
+.error {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 5rem auto 0rem auto;
+
+  &__icon {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  &__message {
+    color: c.$color-danger;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+}

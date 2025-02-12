@@ -1,0 +1,229 @@
+@use "/public/assets/scss/utils/colors" as c;
+
+.details {
+  .info {
+    display: flex;
+    width: 80%;
+    margin: 8rem auto 0 auto;
+    gap: 8rem;
+
+    &__loading-box {
+      width: 16.5rem;
+      height: 12rem;
+      border-radius: 0.5rem;
+      background-color: c.$color-grey-1;
+
+      &--big {
+        width: 50rem;
+        height: 38rem;
+      }
+    }
+
+    &__images {
+      display: flex;
+      gap: 2rem;
+      flex: 3;
+    }
+
+    &__img {
+      background-size: cover;
+      border-radius: 0.5rem;
+
+      &--small {
+        height: 12rem;
+        width: auto;
+        box-shadow: c.$light-box-shadow;
+      }
+
+      &--big {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 1rem;
+      }
+    }
+
+    &__img--big-container {
+      height: 38rem;
+      width: 50rem;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: c.$strong-box-shadow;
+      border-radius: 1rem;
+    }
+
+    &__small-imgs {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      gap: 1rem;
+    }
+
+    &__details {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+
+    &__header {
+      font-size: 2.6rem;
+      margin: 0;
+    }
+
+    &__stars {
+      display: flex;
+      gap: 1rem;
+    }
+
+    &__prices {
+      display: flex;
+      gap: 2rem;
+    }
+
+    &__price {
+      color: c.$color-primary;
+      text-decoration: line-through;
+    }
+
+    &__description {
+      font-size: 1.4rem;
+      line-height: 2.4rem;
+      color: c.$color-grey-3;
+      font-weight: 400;
+    }
+
+    &__add {
+      display: flex;
+      gap: 4rem;
+      align-items: center;
+      margin-top: 4rem;
+    }
+
+    &__heart {
+      width: 1.5rem;
+      height: 1.5rem;
+      cursor: pointer;
+    }
+  }
+
+  .description {
+    background-color: c.$color-grey-1;
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      width: 70%;
+      margin: 8rem auto 0 auto;
+      padding: 5rem 0;
+      gap: 5rem;
+    }
+
+    &__options {
+      display: flex;
+      gap: 7rem;
+    }
+
+    &__option {
+      border: none;
+      background-color: transparent;
+      font-size: 2.4rem;
+      font-weight: 500;
+      color: c.$color-black;
+      cursor: pointer;
+      &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 0.15rem;
+        background-color: transparent;
+        margin-top: 0.5rem;
+        transition: all 0.3s;
+      }
+
+      &:hover {
+        &::after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 0.15rem;
+          background-color: c.$color-black;
+          margin-top: 0.5rem;
+        }
+      }
+
+      &--active {
+        &::after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 0.15rem;
+          background-color: c.$color-black;
+          margin-top: 0.5rem;
+        }
+      }
+    }
+
+    &__desc {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    &__header {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    &__long {
+      line-height: 2rem;
+      font-size: 1.4rem;
+      color: c.$color-grey-3;
+    }
+
+    &__more {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    &__ok-icon {
+      width: 1rem;
+      height: 1rem;
+    }
+
+    &__detail {
+      font-size: 1.4rem;
+    }
+
+    &__reviews {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      margin: 0 auto;
+      align-items: center;
+      width: 100%;
+    }
+
+    &__review {
+      padding: 4rem 8rem;
+      background-color: c.$color-white;
+      border: 1px solid c.$color-grey-2;
+      border-radius: 1rem;
+      width: 65%;
+      display: flex;
+    }
+
+    &__video {
+      width: 100%;
+      height: 60rem;
+
+      & iframe {
+        border: none;
+      }
+    }
+  }
+}
