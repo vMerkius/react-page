@@ -2,6 +2,8 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { IBlog } from "../types/blog";
 
+const URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
+
 interface BlogState {
   blogs: IBlog[];
   loading: boolean;
@@ -15,7 +17,7 @@ const initialState: BlogState = {
 };
 
 export const fetchBlogs = createAsyncThunk("blog/fetchBlogs", async () => {
-  const response = await axios.get("http://localhost:3000/blogs");
+  const response = await axios.get(`${URL}/blogs`);
   return response.data;
 });
 

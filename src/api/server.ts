@@ -7,7 +7,7 @@ import {
   IItemSuccessReponse,
   IPageSuccessReponse,
 } from "../types/page-response";
-const URL = "http://localhost:3000";
+const URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
 
 const fetchFeaturedItemsAPI = async (
   start: number,
