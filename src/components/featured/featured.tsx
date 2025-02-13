@@ -32,6 +32,10 @@ const Featured: React.FC<FeaturedProps> = ({ related = false }) => {
     );
   }, [page]);
 
+  useEffect(() => {
+    console.log(featuredItems);
+  }, [featuredItems]);
+
   if (error) {
     return <ErrorInfo message={error} />;
   }
