@@ -2,7 +2,8 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { IBlog } from "../types/blog";
 
-const URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
+// const URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
+const URL = "https://react-back.azurewebsites.net";
 
 interface BlogState {
   blogs: IBlog[];
